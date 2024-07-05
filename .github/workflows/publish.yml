@@ -1,9 +1,13 @@
 name: Publish Docker Image to GitHub Container Registry
 
-on:
+on: 
   push:
-	branches: [main]  # or any other branch you want to trigger the workflow
-
+    branches: [ main ]
+    tags-ignore:
+      - 'v*'
+  pull_request:
+    branches: [ main ]
+		
 jobs:
   publish-docker-image:
 	runs-on: ubuntu-latest
