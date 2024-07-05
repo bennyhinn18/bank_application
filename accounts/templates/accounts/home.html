@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h2>Welcome, {{ request.user.username }}</h2>
+    <p>Account Balance: {{ account.balance }}</p>
+    <a href="{% url 'transaction' %}">Make a Transaction</a>
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
