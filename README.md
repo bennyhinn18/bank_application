@@ -421,7 +421,16 @@ This project is a simple bank application developed using the Django framework. 
     ```
 
 11. **Access the Application**: Open a web browser and go to `http://127.0.0.1:8000/accounts/register/` to register a new user.
-
+### Using Docker
+   ```bash
+   docker-compose up --build
+   ```
+   ```bash
+  docker exec -it <my_container> python manage.py makemigrations
+   ```
+   ```bash
+  docker exec -it <my_container> python manage.py migrate
+   ```  
 ### Result
 
 The bank application should now be up and running. Users can register, log in, view their account balance, perform transactions, and see their transaction history. Here are some sample results:
